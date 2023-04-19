@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= title %>
+  </title>
+  <script src="https://kit.fontawesome.com/5d7f344ad1.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+  <!-- header part-------------------------------- -->
+  <header class="header">
+    <h1>TODO List</h1>
+    <h3>APP</h3>
+  </header>
+  <!-- main part------------------------------------------------------------------- -->
+  <main class="main">
+    <form action="/create-tasks" method="post">
+      <!-- --task bar or descriptuin ----------------------------------------- -->
+      <div class ="section">
+      <label for="description">Description</label>
+      <input type="text" id="description" placeholder="add task here" name="TASKS" required>
+     </div>
+     <!-- ----date selection  and  catagory selection----------------------------- -->
+     <div class="section2">
+      <label for="duedate">Due Date</label>
+      <input type="date" id="duedate" name="DATE" required>
+      <label for="catagory">Add Catagory</label>
+      <select name="CATAGORY" id="catagory">
+        <option value="personal" name="CATAGORY">personal</option>
+        <option value="weekly" name="CATAGORY">weekly</option>
+        <option value="Daily" name="CATAGORY">Daily</option>
+        <option value="monthly" name="CATAGORY">monthly</option>
+        <option value="custom" name="CATAGORY">custom</option>
+      </select>
+      </div>
+      <!-- ----all active butns --------------------------------------- -->
+      <div class="section3">
+      <button type="submit">Add Task</button>
+      <button type="reset"  id = "deletebutn">Reset butn</button>
+    </div>
+    </form>
+    <ul>
+        <%for(let i=addTasks.length-1; i>=0; i--){%>
+      <li>
+        <div class = "tasksContenar">
+         <a href="/delete_task/?id=<%= addTasks[i]._id%>"> <div class="delettask"><i class="fa-sharp fa-solid fa-trash"></i></div></a>
+        <h4> <%= addTasks[i].description%></h4>
+       <p id = "datep"><i class="fa-sharp fa-solid fa-bell"></i> <%= addTasks[i].date%> </p>
+      <div id = "catap"> <p> <%= addTasks[i].catagory%> </p> </div>
+      </div>
+      </li>
+      <%}%>
+    </ul>
+  </main>
+  <!-- footer part--------------------------------------------------------------------- -->
+  <footer class="footer">
+    <div class="footerdiv">
+      Nirjus Karmakar@copyright
+    </div>
+  </footer>
+  <script src="/js/home.js"></script>
+</body>
+
+</html>

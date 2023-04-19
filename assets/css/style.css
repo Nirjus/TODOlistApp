@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+/* *************************************header part styling********************************** */
+.header {
+    text-align: end;
+    position: relative;
+    /* border: 1px solid black; */
+    margin-right: 10%;
+    margin-left: 10%;
+    height: 80px;
+    background-color: blueviolet;
+    color: aliceblue;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.header h3 {
+    margin-right: 120px
+}
+
+.header h1 {
+    margin-right: 20px;
+}
+/* ***************************************main part styling********************************************************* */
+.main {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 11px;
+    margin-bottom: 10px;
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    border-radius: 12px;
+    background-color: rgb(255, 0, 153);
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    overflow:scroll;
+}
+.main::-webkit-scrollbar{
+    display: none;
+}
+/* *****************all 3 section section2 section3 styling********************* */
+.main .section {
+    padding: 10px;
+    border: 1px solid;
+    height: 60px;
+   padding-left: 40px;
+}
+.main .section input {
+    width:80%;
+    height:100%;
+    border-radius: 15px;
+    border-style: none;
+    text-align: center;
+}
+.main .section2 {
+    padding: 10px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   border:  1px solid;
+   padding-left: 40px;
+   padding-right: 50px;
+}
+.main .section2 input,select{
+  width: 30%;
+  height: 100%;
+  border-radius: 15px;
+  border-style: none;
+  text-align: center;
+}
+.section3{
+    padding: 10px;
+    padding-top: 15px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: auto;
+    background-color: rgb(233, 110, 184);
+    box-shadow: inset 2px 2px 5px 1px black; 
+}
+input,select{
+font-size: 20px;
+background-color: rgb(233, 198, 209);
+box-shadow: inset 2px 2px 5px 1px;
+}
+label{
+    text-transform: uppercase;
+    font-size:large;
+}
+/* **********************************tasks list style **********************************/
+.tasksContenar{
+    /* border:1px solid; */
+    padding: 10px;
+    padding-left: 15px;
+    margin: 10px;
+    background-color: rgb(219, 130, 251);
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow:inset 0px 0px 6px 2px rgb(244, 57, 203);
+    color: rgb(23, 37, 107);
+}
+#catap{
+    display:flex;
+    justify-content: end;
+    /* flex-direction: row-reverse; */
+    border:1px solid;
+    width:100px;
+    height: 26px;
+    margin-left: 80%;
+    margin-top: -45px;
+ padding:12px;
+ background-color: greenyellow;
+font-weight: 600;
+}
+#catap p{
+     margin: auto;
+}
+#datep{
+    font-size: 16px;
+    margin-left: 42px;
+}
+.tasksContenar h4{
+    font-size: larger;
+    text-decoration:underline;
+    margin-left: 42px;
+    overflow-wrap:break-word;
+}
+
+.delettask {
+    height: 75px;
+    width: 32px;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin-left: -15px;
+    margin-top: -10px;
+    /* top: auto; */
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    align-items: center;
+    background-color: lightyellow;
+    overflow-wrap:break-word;
+}
+.delettask:hover{
+background-color: red;
+transition: 0.6s;
+}
+/* *********************all working button style***************************** */
+ button {
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: rgb(208, 255, 0);
+    font-size: large;
+    cursor: pointer;
+    box-shadow:  2px 2px 5px 1px;
+}
+#deletebutn{
+    background-color: rgb(188, 5, 5);
+}
+button:hover{
+    background-color: rgb(249, 253, 5);
+}
+#deletebutn:hover{
+  background-color: rgb(227, 42, 42);
+}
+/* <**************************Footer Part styling*****************************************************> */
+.footerdiv {
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 1px solid black;
+    background-color: rgb(69, 67, 67);
+    color: #fff;
+    font-weight: 600;
+    height: 25px;
+    width: 80%;
+    bottom: 0;
+    position: absolute;
+}
